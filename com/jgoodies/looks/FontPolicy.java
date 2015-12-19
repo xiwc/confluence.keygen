@@ -7,8 +7,8 @@ public abstract interface FontPolicy
   public abstract FontSet getFontSet(String paramString, UIDefaults paramUIDefaults);
 }
 
-
-/* Location:           C:\Users\xi\Desktop\confluence_keygen\confluence_keygen.jar
- * Qualified Name:     com.jgoodies.looks.FontPolicy
- * JD-Core Version:    0.7.0.1
+
+/* Location:              C:\Users\xi\Desktop\confluence_keygen\confluence_keygen.jar!\com\jgoodies\looks\FontPolicy.class
+ * Java compiler version: 5 (49.0)
+ * JD-Core Version:       0.7.1
  */

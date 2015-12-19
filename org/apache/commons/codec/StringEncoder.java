@@ -7,8 +7,8 @@ public abstract interface StringEncoder
     throws EncoderException;
 }
 
-
-/* Location:           C:\Users\xi\Desktop\confluence_keygen\confluence_keygen.jar
- * Qualified Name:     org.apache.commons.codec.StringEncoder
- * JD-Core Version:    0.7.0.1
+
+/* Location:              C:\Users\xi\Desktop\confluence_keygen\confluence_keygen.jar!\org\apache\commons\codec\StringEncoder.class
+ * Java compiler version: 5 (49.0)
+ * JD-Core Version:       0.7.1
  */

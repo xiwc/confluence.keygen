@@ -1,52 +1,102 @@
-/*  1:   */ package org.jdesktop.swingworker;
-/*  2:   */ 
-/*  3:   */ import java.beans.PropertyChangeEvent;
-/*  4:   */ import java.beans.PropertyChangeSupport;
-/*  5:   */ import javax.swing.SwingUtilities;
-/*  6:   */ 
-/*  7:   */ public final class SwingPropertyChangeSupport
-/*  8:   */   extends PropertyChangeSupport
-/*  9:   */ {
-/* 10:   */   static final long serialVersionUID = 7162625831330845068L;
-/* 11:   */   private final boolean notifyOnEDT;
-/* 12:   */   
-/* 13:   */   public SwingPropertyChangeSupport(Object sourceBean)
-/* 14:   */   {
-/* 15:36 */     this(sourceBean, false);
-/* 16:   */   }
-/* 17:   */   
-/* 18:   */   public SwingPropertyChangeSupport(Object sourceBean, boolean notifyOnEDT)
-/* 19:   */   {
-/* 20:51 */     super(sourceBean);
-/* 21:52 */     this.notifyOnEDT = notifyOnEDT;
-/* 22:   */   }
-/* 23:   */   
-/* 24:   */   public void firePropertyChange(final PropertyChangeEvent evt)
-/* 25:   */   {
-/* 26:70 */     if (evt == null) {
-/* 27:71 */       throw new NullPointerException();
-/* 28:   */     }
-/* 29:73 */     if ((!isNotifyOnEDT()) || (SwingUtilities.isEventDispatchThread())) {
-/* 30:75 */       super.firePropertyChange(evt);
-/* 31:   */     } else {
-/* 32:77 */       SwingUtilities.invokeLater(new Runnable()
-/* 33:   */       {
-/* 34:   */         public void run()
-/* 35:   */         {
-/* 36:80 */           SwingPropertyChangeSupport.this.firePropertyChange(evt);
-/* 37:   */         }
-/* 38:   */       });
-/* 39:   */     }
-/* 40:   */   }
-/* 41:   */   
-/* 42:   */   public final boolean isNotifyOnEDT()
-/* 43:   */   {
-/* 44:94 */     return this.notifyOnEDT;
-/* 45:   */   }
-/* 46:   */ }
+/*    */ package org.jdesktop.swingworker;
+/*    */ 
+/*    */ import java.beans.PropertyChangeEvent;
+/*    */ import java.beans.PropertyChangeSupport;
+/*    */ import javax.swing.SwingUtilities;
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ public final class SwingPropertyChangeSupport
+/*    */   extends PropertyChangeSupport
+/*    */ {
+/*    */   static final long serialVersionUID = 7162625831330845068L;
+/*    */   private final boolean notifyOnEDT;
+/*    */   
+/*    */   public SwingPropertyChangeSupport(Object sourceBean)
+/*    */   {
+/* 36 */     this(sourceBean, false);
+/*    */   }
+/*    */   
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */   public SwingPropertyChangeSupport(Object sourceBean, boolean notifyOnEDT)
+/*    */   {
+/* 51 */     super(sourceBean);
+/* 52 */     this.notifyOnEDT = notifyOnEDT;
+/*    */   }
+/*    */   
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */   public void firePropertyChange(final PropertyChangeEvent evt)
+/*    */   {
+/* 70 */     if (evt == null) {
+/* 71 */       throw new NullPointerException();
+/*    */     }
+/* 73 */     if ((!isNotifyOnEDT()) || (SwingUtilities.isEventDispatchThread()))
+/*    */     {
+/* 75 */       super.firePropertyChange(evt);
+/*    */     } else {
+/* 77 */       SwingUtilities.invokeLater(new Runnable()
+/*    */       {
+/*    */         public void run() {
+/* 80 */           SwingPropertyChangeSupport.this.firePropertyChange(evt);
+/*    */         }
+/*    */       });
+/*    */     }
+/*    */   }
+/*    */   
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */   public final boolean isNotifyOnEDT()
+/*    */   {
+/* 94 */     return this.notifyOnEDT;
+/*    */   }
+/*    */ }
 
-
-/* Location:           C:\Users\xi\Desktop\confluence_keygen\confluence_keygen.jar
- * Qualified Name:     org.jdesktop.swingworker.SwingPropertyChangeSupport
- * JD-Core Version:    0.7.0.1
+
+/* Location:              C:\Users\xi\Desktop\confluence_keygen\confluence_keygen.jar!\org\jdesktop\swingworker\SwingPropertyChangeSupport.class
+ * Java compiler version: 5 (49.0)
+ * JD-Core Version:       0.7.1
  */

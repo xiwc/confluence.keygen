@@ -1,24 +1,57 @@
-/*  1:   */ package com.jgoodies.looks.common;
-/*  2:   */ 
-/*  3:   */ import javax.swing.JComponent;
-/*  4:   */ import javax.swing.plaf.ComponentUI;
-/*  5:   */ 
-/*  6:   */ public final class ExtBasicCheckBoxMenuItemUI
-/*  7:   */   extends ExtBasicRadioButtonMenuItemUI
-/*  8:   */ {
-/*  9:   */   protected String getPropertyPrefix()
-/* 10:   */   {
-/* 11:45 */     return "CheckBoxMenuItem";
-/* 12:   */   }
-/* 13:   */   
-/* 14:   */   public static ComponentUI createUI(JComponent b)
-/* 15:   */   {
-/* 16:49 */     return new ExtBasicCheckBoxMenuItemUI();
-/* 17:   */   }
-/* 18:   */ }
+/*    */ package com.jgoodies.looks.common;
+/*    */ 
+/*    */ import javax.swing.JComponent;
+/*    */ import javax.swing.plaf.ComponentUI;
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ public final class ExtBasicCheckBoxMenuItemUI
+/*    */   extends ExtBasicRadioButtonMenuItemUI
+/*    */ {
+/*    */   protected String getPropertyPrefix()
+/*    */   {
+/* 45 */     return "CheckBoxMenuItem";
+/*    */   }
+/*    */   
+/*    */   public static ComponentUI createUI(JComponent b) {
+/* 49 */     return new ExtBasicCheckBoxMenuItemUI();
+/*    */   }
+/*    */ }
 
-
-/* Location:           C:\Users\xi\Desktop\confluence_keygen\confluence_keygen.jar
- * Qualified Name:     com.jgoodies.looks.common.ExtBasicCheckBoxMenuItemUI
- * JD-Core Version:    0.7.0.1
+
+/* Location:              C:\Users\xi\Desktop\confluence_keygen\confluence_keygen.jar!\com\jgoodies\looks\common\ExtBasicCheckBoxMenuItemUI.class
+ * Java compiler version: 5 (49.0)
+ * JD-Core Version:       0.7.1
  */

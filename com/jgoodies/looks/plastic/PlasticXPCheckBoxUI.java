@@ -1,29 +1,64 @@
-/*  1:   */ package com.jgoodies.looks.plastic;
-/*  2:   */ 
-/*  3:   */ import javax.swing.AbstractButton;
-/*  4:   */ import javax.swing.JComponent;
-/*  5:   */ import javax.swing.plaf.ComponentUI;
-/*  6:   */ import javax.swing.plaf.basic.BasicButtonListener;
-/*  7:   */ import javax.swing.plaf.metal.MetalCheckBoxUI;
-/*  8:   */ 
-/*  9:   */ public final class PlasticXPCheckBoxUI
-/* 10:   */   extends MetalCheckBoxUI
-/* 11:   */ {
-/* 12:49 */   private static final PlasticXPCheckBoxUI INSTANCE = new PlasticXPCheckBoxUI();
-/* 13:   */   
-/* 14:   */   public static ComponentUI createUI(JComponent b)
-/* 15:   */   {
-/* 16:52 */     return INSTANCE;
-/* 17:   */   }
-/* 18:   */   
-/* 19:   */   protected BasicButtonListener createButtonListener(AbstractButton b)
-/* 20:   */   {
-/* 21:56 */     return new ActiveBasicButtonListener(b);
-/* 22:   */   }
-/* 23:   */ }
+/*    */ package com.jgoodies.looks.plastic;
+/*    */ 
+/*    */ import javax.swing.AbstractButton;
+/*    */ import javax.swing.JComponent;
+/*    */ import javax.swing.plaf.ComponentUI;
+/*    */ import javax.swing.plaf.basic.BasicButtonListener;
+/*    */ import javax.swing.plaf.metal.MetalCheckBoxUI;
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ public final class PlasticXPCheckBoxUI
+/*    */   extends MetalCheckBoxUI
+/*    */ {
+/* 49 */   private static final PlasticXPCheckBoxUI INSTANCE = new PlasticXPCheckBoxUI();
+/*    */   
+/*    */   public static ComponentUI createUI(JComponent b) {
+/* 52 */     return INSTANCE;
+/*    */   }
+/*    */   
+/*    */   protected BasicButtonListener createButtonListener(AbstractButton b) {
+/* 56 */     return new ActiveBasicButtonListener(b);
+/*    */   }
+/*    */ }
 
-
-/* Location:           C:\Users\xi\Desktop\confluence_keygen\confluence_keygen.jar
- * Qualified Name:     com.jgoodies.looks.plastic.PlasticXPCheckBoxUI
- * JD-Core Version:    0.7.0.1
+
+/* Location:              C:\Users\xi\Desktop\confluence_keygen\confluence_keygen.jar!\com\jgoodies\looks\plastic\PlasticXPCheckBoxUI.class
+ * Java compiler version: 5 (49.0)
+ * JD-Core Version:       0.7.1
  */
