@@ -15,10 +15,12 @@ import java.security.spec.InvalidKeySpecException;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.text.MessageFormat;
 import java.text.SimpleDateFormat;
-import java.util.Base64;
+//import java.util.Base64;
 import java.util.Date;
 import java.util.zip.Deflater;
 import java.util.zip.DeflaterInputStream;
+
+import org.apache.commons.codec.binary.Base64;
 
 public final class LicenseFile implements KeyConstants {
 	private final byte[] zipLicense(byte[] lic) {
@@ -98,8 +100,8 @@ public final class LicenseFile implements KeyConstants {
 		System.arraycopy(zlic, 0, text, 5, zlic.length);
 		try {
 			KeyFactory keyFactory = KeyFactory.getInstance("DSA");
-			// byte[] rawPrivateKey = Base64.decodeBase64(DSA_KEY[1]);
-			byte[] rawPrivateKey = Base64.getDecoder().decode(DSA_KEY[1]);
+			byte[] rawPrivateKey = Base64.decodeBase64(DSA_KEY[1]);
+			// byte[] rawPrivateKey = Base64.getDecoder().decode(DSA_KEY[1]);
 
 			EncodedKeySpec privateKeySpec = new PKCS8EncodedKeySpec(
 					rawPrivateKey);
@@ -128,8 +130,8 @@ public final class LicenseFile implements KeyConstants {
 		}
 		byte[] fullLic = out.toByteArray();
 
-		// licStr = new String(Base64.encodeBase64(fullLic));
-		licStr = new String(Base64.getEncoder().encode(fullLic));
+		licStr = new String(Base64.encodeBase64(fullLic));
+		// licStr = new String(Base64.getEncoder().encode(fullLic));
 		int len = licStr.length();
 		licStr = licStr + "X02" + Integer.toString(len, 31);
 
