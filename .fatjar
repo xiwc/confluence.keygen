@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Sat Dec 19 22:10:22 CST 2015
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=confluence.keygen.linux_fat.jar
+manifest.mergeall=true
+manifest.mainclass=confluence.keygen.linux.MainApp
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=
